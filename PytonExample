@@ -1,0 +1,22 @@
+import Tkinter
+
+class NewGUI:
+    def __init__(self):
+        self.main_window = Tkinter.Tk()
+        self.main_window.wm_title('Hello World!')
+        
+        self.top_frame = Tkinter.Frame(self.main_window)
+        self.bottom_frame = Tkinter.Frame(self.main_window)
+        
+        self.label1 = Tkinter.Label(self.top_frame, text= 'Hello World!')
+        self.label2 = Tkinter.Label(self.bottom_frame, text= 'Coffee example')
+        
+        self.label1.pack(side= 'top')
+        self.label2.pack(side= 'top')
+        
+        self.top_frame.pack()
+        self.bottom_frame.pack()
+        
+        Tkinter.mainloop()
+        
+new_gui = NewGUI()
